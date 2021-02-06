@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <script type="text/javascript" src="{% static 'jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <form>
+      <div class="card-header">Login Page</div>
+      <div class="card-body">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" name="Username" placeholder="Enter Username" class="form-control"required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="Password" name="Password" placeholder="enter Password" class="form-control"required>
+        </div>
+      </div>
+      <div class="card-footer bg-info">
+        <button class= "btn btn- secondary">login</button>
+        
+      </div>
+
+    </form>
+    </div>
+
+    </div>
+      
+    </div>
+    </div>
+  </body>
+</html>

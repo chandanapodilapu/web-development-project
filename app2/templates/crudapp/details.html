@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>details</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <script type="text/javascript" src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <!-- <a class="navbar-brand" href="#">Logo</a>
+
+   -->
+   <a class="navbar-brand" href="#">Crud Operations</a>
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <!-- <a class="nav-link" href="#">Regiter</a> -->
+      <a class="nav-link" href="{% url 'addstudent' %}">Regiter</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Details</a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link" href="#">Link 3</a>
+    </li> -->
+  </ul>
+</nav>
+<div class= "container mt-5">
+	<h2 class="alert alert-info text-center">Dispaly Data</h2>
+    <table class="table table-bordered">
+    	<thead>
+    		<tr>
+    			<th>s.no</th>
+    			<th>first name</th>
+    			<th>last name</th>
+    			<th>name</th>
+    			<th>roll no</th>
+    			<th>email</th>
+    			<th>phone no</th>
+    			<th>gender</th>
+    			<th>age</th>
+    			<th colspan="2">Operations</th>
+    		</tr>  
+    	</thead>
+    		</body> 
+    		   {% for i in info %} 
+    	      <tr>
+    	      	<td>{{i.id}}</td>
+    	      	<td>{{i.fname}}</td>
+    	      	<td>{{i.lname}}</td>
+    	      	<td>{{i.name}}</td>
+    	      	<td>{{i.rnum}}</td>
+    	      	<td>{{i.email}}</td>
+    	      	<td>{{i.mobile}}</td>
+    	      	<td>{{i.gender}}</td>
+    	      	<td>{{i.age}}</td>
+    	      	<td><a class="btn btn-outline-success" href="{% url 'update' i.id%}">update</a></td>
+    	      	<td><a class="btn btn-outline-success" href="{% url 'delete' i.id %}">delete</a></td>
+     	      </tr>
+    	      {% endfor %}
+    	  </tbody>
+    </table>	
+</div>
+</body>
+</html>

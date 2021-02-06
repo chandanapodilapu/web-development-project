@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <script type="text/javascript" src="{% static 'jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+ 
+</head>
+<body background="{% static 'images/bg.png' %}"style="background-repeat: no-repeat;background-size: cover";class = "background">
+    <div class="container col-md-6">
+    	<div class="jumbotron mt-5 bg-info">
+    		<h1 class="text-warning text-center">This is bootstrap Block</h1>
+    </div>
+  </div>
+  <div class="container col=md=9">
+    <div class="table table-stripped"> 
+      <table>
+        <thead class="bg-dark text-center text-white">
+          <th>roll no</th>
+          <th>name</th>
+          <th>gender</th>
+          <th>conversation</th>
+        </thead>
+        <tbody class="bg-info">
+          <td>chandu</td>
+          <td>536</td>
+          <td>female</td>
+          <td>Hi friends</td>
+        </tbody>
+        <tbody class="bg-warning">
+          <td>aneela</td>
+          <td>530</td>
+          <td>female</td>
+          <td>Bye friends</td>
+        </tbody>
+        <tbody class="bg-info">
+          <td>kukka(gayathri)</td>
+          <td>505</td>
+          <td>Male</td>
+          <td>Urike chepali anipinchindhi Friends</td>
+        </tbody>
+    </table>
+    </div>
+  </div>
+  <div class="container bg-dark" >
+  <div class="row mt-4 my-2">
+    <div class="col-4 mt-3">
+      <img src="{% static 'images/1.png' %}" class="img-thumbnail">
+    </div>
+    <div class="col-4 mt-3">
+      <img src="{% static 'images/2.png' %}" style="height: 165px;width: 300px" class="rounded-circle">
+    </div>
+    <div class="col-4 mt-3">
+      <img src="{% static 'images/3.png' %}" style="height: 165px;width: 300px" class="img-thumbnail">
+    </div>
+  </div>
+</div>
+  
+</body>
+</html>
+</body>
